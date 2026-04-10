@@ -1,1 +1,13 @@
+Steps:
 
+1. Run 'StandardDataCreation.m'. This will return a file named 'StandardData.mat'. 
+Description: This contains the the time-series values of the four dynamical variables Vstd, Mstd, Nstd, and Hstd, when the system is on the stable limit cycle producing
+repeated action potentials. It also contains the steady-state associated values the variables Vo, Mo, No and Ho. These will be used to track if the system 
+post=perturbation returned to the limit cycle or collapse into the steady state. Moreover, if it returns to the limit cycle, we can find out the new phase of relaxation.
+
+2. Next, type the values of strength of voltage perturbation (-ve or +ve values), Vperturb, and the range of old phases for perturbation, Range_init and Range_final,
+in the script 'PLAY.m'.
+Description: Run PLAY.m will automatical set the remaining necessary variables and launch 'HHsimulate.m' to perform pertrubation analysis within the specified old phase
+range, and it will return a phase response curve (PRC) for the specified strength of voltage pertrubation. Red-filled circular markers for the new phase in PRC plot
+represents return of the system to the limit cycle and inform about the value of new phase. However, vertical black line in the PRC respresents collapse of the pertrubed
+system to the steady-state.
